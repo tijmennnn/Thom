@@ -81,8 +81,13 @@
 
     .progress-bar-inner {
       height: 100%;
-      width: 8%;
+      width: 0;
       background-color: var(--gold);
+      animation: fillProgress 2s ease-out forwards;
+    }
+
+    @keyframes fillProgress {
+      to { width: 8%; }
     }
 
     .progress-label {
@@ -91,7 +96,7 @@
       color: var(--gray);
     }
 
-    .quote-block, .history-block {
+    .quote-block {
       border-left: 4px solid var(--gold);
       padding: 30px 20px;
       background-color: rgba(255, 255, 255, 0.05);
@@ -110,11 +115,16 @@
       gap: 20px;
     }
 
-    .collage img {
+    .collage img,
+    .collage video {
       width: 100%;
       border-radius: 8px;
       object-fit: cover;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    video {
+      max-height: 500px;
     }
 
     @media (max-width: 600px) {
@@ -146,11 +156,6 @@
       <div class="progress-label">8% voorbereid – Reis moet nog beginnen</div>
     </section>
 
-    <section class="history-block">
-      <h2>Onze Reis naar Brugge</h2>
-      <p>Max, binnenkort gaan wij samen naar Brugge. Een weekend vol avontuur, gezelligheid en mooie herinneringen. Deze reis is jouw verrassing, een cadeau van mij aan jou, omdat je dat dubbel en dwars verdient. We gaan het plannen, inpakken en herinneringen maken die voor altijd bij blijven. Maak je klaar, want Brugge wacht op ons.</p>
-    </section>
-
     <section class="quote-block">
       <p>
 Max,
@@ -165,7 +170,9 @@ maar max je bent een top vent ik hou van jou je zou voor altijd een plekje in mi
     </section>
 
     <div class="collage">
-      <img src="Thom-kaartenfoto.jpeg" alt="Thom en Max kaarten">
+      <img src="Thom-kaartenfoto.jpeg" alt="Kaarten met Max">
+      <video src="Thom-fietsenfilmpje.mp4" controls></video>
+      <video src="Thom-maxautistfilmpje.mp4" controls></video>
     </div>
   </div>
 </body>
